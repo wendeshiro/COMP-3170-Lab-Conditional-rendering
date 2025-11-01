@@ -40,7 +40,7 @@
   color: white;
 }
 
-.editBtn:hover {
+.editBtn:enabled:hover {
   background-color: #326182;
 }
 
@@ -49,8 +49,16 @@
   color: #ffffff;
 }
 
-.deleteBtn:hover {
+/* when it's enabled */
+.deleteBtn:enabled:hover {
   background-color: #893939;
+}
+
+.editBtn:disabled,
+.deleteBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: grayscale(20%);
 }
 
 .bookList {
@@ -61,10 +69,16 @@
   align-content: flex-start;
 }
 
-.filters {
-  margin-left: 150px;
-  margin-top: 20px;
+.actionsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 20px 0;
+  padding: 0 150px;
+  gap: 50px;
+}
 
+.filters {
   label {
     margin-right: 10px;
     font-weight: bold;
@@ -76,4 +90,20 @@
     border-radius: 8px;
     font-size: 16px;
   }
+}
+
+.manageLoansBtn {
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: #4378a5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  min-width: 150px;
+}
+
+.manageLoansBtn:hover {
+  background-color: #27577d;
 }

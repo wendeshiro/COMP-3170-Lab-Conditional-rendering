@@ -9,6 +9,7 @@
   border: #d2c6bf 1px solid;
   border-radius: 8px;
   padding: 8px;
+  /* ↓ for tag on book ↓ */
   position: relative;
   transition: all 0.3s ease-in-out;
 }
@@ -74,6 +75,18 @@
 .selected {
   background: rgba(209, 222, 230, 1);
   box-shadow: 0 0 50px rgba(209, 222, 230, 0.8);
+}
+
+.loanTag {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background: #d24d3e;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* .removeButton {

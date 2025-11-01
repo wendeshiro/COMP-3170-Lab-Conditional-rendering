@@ -95,9 +95,9 @@
 .manageLoansBtn {
   padding: 10px 18px;
   font-size: 16px;
-  background-color: #4378a5;
-  color: white;
-  border: none;
+  background-color: transparent;
+  color: #55471b;
+  border: 1px solid #55471b;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
@@ -105,5 +105,5 @@
 }
 
 .manageLoansBtn:hover {
-  background-color: #27577d;
+  background-color: rgb(234, 229, 212);
 }

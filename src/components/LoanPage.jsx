@@ -81,7 +81,7 @@ export default function LoanPage({ onBack, books = [], onLoan }) {
         {availableBooks.length === 0 ? (
           <p className={styles.noBooksMessage}>There are no available books to borrow</p>
         ) : (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className={styles.loanForm}>
             <label htmlFor="borrower">Borrower</label>
             <input
               type="text"
@@ -108,7 +108,7 @@ export default function LoanPage({ onBack, books = [], onLoan }) {
               ))}
             </select>
 
-            <label htmlFor="loanPeriod">Loan Period</label>
+            <label htmlFor="loanPeriod">Loan Period (in weeks)</label>
             <input
               type="number"
               id="loanPeriod"
@@ -123,14 +123,12 @@ export default function LoanPage({ onBack, books = [], onLoan }) {
             <button type="submit">Submit</button>
           </form>
         )}
-
+        <hr />
         <div className={styles.loanedContainer}>
-          <p>Currently on loan</p>
+          <p className={styles.loanedTitle}>Currently on loan</p>
           <div className={styles.bookList}>
             {combinedLoans.length === 0 ? (
-              <div className={styles.bookItem}>
-                <p>No current loans</p>
-              </div>
+              <p className={styles.noLoansMessage}>No current loans</p>
             ) : (
               <>
                 {combinedLoans.map((entry) => {

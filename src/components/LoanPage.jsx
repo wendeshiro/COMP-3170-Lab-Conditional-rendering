@@ -82,6 +82,7 @@ export default function LoanPage({ onBack, books = [], onLoan }) {
           <p className={styles.noBooksMessage}>There are no available books to borrow</p>
         ) : (
           <form onSubmit={handleSubmit} className={styles.loanForm}>
+            <p className={styles.loanTitle}>Loan a Book</p>
             <label htmlFor="borrower">Borrower</label>
             <input
               type="text"
